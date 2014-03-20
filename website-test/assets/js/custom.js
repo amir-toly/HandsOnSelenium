@@ -121,28 +121,33 @@ jQuery(document).ready(function ($) {
     //Portfolio filter
 
     $('ul#portfolio-filter a').click(function () {
+        var that = this;
+        setTimeout(function () {
 
-        $('ul#portfolio-filter a.currents').removeClass('currents');
-        $(this).addClass('currents');
+            $('ul#portfolio-filter a.currents').removeClass('currents');
+            $(that).addClass('currents');
 
-        var filterVal = $(this).text().toLowerCase().replace(' ', '-');
+            var filterVal = $(that).text().toLowerCase().replace(' ', '-');
+            if (filterVal == 'all') {
+                $('#containment-portfolio li.hidden').show(1000).removeClass('hidden');
+            } else {
 
-        if (filterVal == 'all') {
-            $('#containment-portfolio li.hidden').show(1000).removeClass('hidden');
-        } else {
+                $('#containment-portfolio li').each(function () {
 
-            $('#containment-portfolio li').each(function () {
-                if (!$(this).hasClass(filterVal)) {
-                    $(this).hide(1000).addClass('hidden');
+                    if (!$(this).hasClass(filterVal)) {
+                        $(this).hide(1000).addClass('hidden');
 
-                } else {
-                    $(this).show(1000).removeClass('hidden');
+                    } else {
+                        $(this).show(1000).removeClass('hidden');
 
-                }
-            });
-        }
+                    }
+                });
+            }
 
-        return false;
+            return false;
+        }, 1500);
+
+
     });
 
     //Carousel images
