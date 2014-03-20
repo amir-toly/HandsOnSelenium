@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -44,20 +45,30 @@ public class Exercice1 {
     }
 
 
-    @Test
+    @Test //utiliser expectedConditions
     public void when_click_to_next_then_new_datas_with_explicit_wait() throws InterruptedException {
         assertThat(driver.findElements(By.cssSelector("#containment-portfolio")).size()).isEqualTo(1);
         driver.findElement(By.ByLinkText.linkText("WEB")).click();
         (new WebDriverWait(driver, 10))
-                .until(new ExpectedCondition<Boolean>() {
-                    @Override
-                    public Boolean apply(WebDriver driver) {
-                        return driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size() == 4;
-                    }
-
-                });
+                               .until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#containment-portfolio li.video")));
         assertThat(driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size()).isEqualTo(4);
     }
+
+    @Test //créer votre propre expectedCondition
+    public void when_click_to_next_then_new_datas_with_explicit_wait_2() throws InterruptedException {
+        assertThat(driver.findElements(By.cssSelector("#containment-portfolio")).size()).isEqualTo(1);
+        driver.findElement(By.ByLinkText.linkText("WEB")).click();
+        (new WebDriverWait(driver, 10))
+                        .until(new ExpectedCondition<Boolean>() {
+                            @Override
+                            public Boolean apply(WebDriver driver) {
+                                return driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size() == 4;
+                            }
+                 });
+        assertThat(driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size()).isEqualTo(4);
+    }
+
+
 
     @After
     public void afterTest() {
