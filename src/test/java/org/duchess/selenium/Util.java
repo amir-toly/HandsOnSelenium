@@ -24,4 +24,7 @@ public class Util {
         return Util.getPath() + "features.html";
     }
 
+    public static String getPortfolio2() {
+        return Util.getPath() + "portfolio-two.html";
+    }
 }
