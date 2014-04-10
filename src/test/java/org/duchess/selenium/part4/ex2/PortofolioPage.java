@@ -9,9 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-/**
- * Created by rigabertm on 10/04/14.
- */
+
 public class PortofolioPage {
     private final WebDriver driver;
     @FindBy(linkText = "WEB")

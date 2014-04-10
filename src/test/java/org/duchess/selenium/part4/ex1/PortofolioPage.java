@@ -5,9 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by rigabertm on 10/04/14.
- */
+
 public class PortofolioPage {
     private final WebDriver driver;
 
