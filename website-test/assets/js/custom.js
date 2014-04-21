@@ -92,31 +92,7 @@ jQuery(document).ready(function ($) {
         },
         1000);
 
-    //Google map setting
 
-//    $('#google_map').gmap3({
-//        action: 'addMarker',
-//        address: "Pearl St, NY",
-//        map: {
-//            center: true,
-//            zoom: 10
-//        },
-//        marker: {
-//            options: {
-//                draggable: false
-//            }
-//        },
-//        infowindow: {
-//            options: {
-//                // content: 'Hello World !<br>Phone: +1 111 111-11-11<br>Address: Chicago, IL, 111 Webdev St'
-//            },
-//            events: {
-//                closeclick: function() {
-//
-//}
-//            }
-//        }
-//    });
 
     //Portfolio filter
 
