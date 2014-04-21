@@ -35,7 +35,7 @@ public class Exercice1
 
         // ADD CODE HERE
 
-        assertThat(driver.getTitle()).isEqualTo("About");
+        assertThat(driver.getTitle()).isEqualTo("Blog");
         driver.quit();
     }
 }
