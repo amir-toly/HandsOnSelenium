@@ -29,6 +29,9 @@ public class Exercice2
     }
 
     @Test
+    /**
+     * Remplir les champs du formulaire puis valider le formulaire pour faire passer le test.
+     */
     public void when_fill_contact_form_then_form_submit() throws IOException {
         // ADD CODE HERE
 
@@ -38,6 +41,10 @@ public class Exercice2
     }
 
     @Test
+    /**
+     * Remplir les champs du formulaire sauf le champs email puis valider le formulaire.
+     * Ajouter une assertion pour vérifier que le champs email a maintenant une bordure bleue.
+     */
     public void when_fill_contact_form_with_no_email_then_field_is_getting_a_blue_border() {
         //Write the full test
 

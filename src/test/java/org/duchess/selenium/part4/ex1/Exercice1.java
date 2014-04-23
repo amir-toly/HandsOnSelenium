@@ -31,7 +31,6 @@ public class Exercice1 {
 
     @Test
     public void when_click_to_next_then_new_datas_with_implicit_wait() {
-        assertThat(driver.findElements(By.cssSelector("#containment-portfolio")).size()).isEqualTo(1);
         driver.findElement(By.ByLinkText.linkText("WEB")).click();
         (new WebDriverWait(driver, 10))
                         .until(new ExpectedCondition<Boolean>() {

@@ -27,6 +27,9 @@ public class Exercice4
     }
 
     @Test
+    /**
+     * Pour que le test passe, il faudra accepter l'alert qui s'affiche
+     */
     public void when_accepting_alert_then_text_changed() {
         driver.findElement(By.id("bigbutton")).click();
 
@@ -36,6 +39,9 @@ public class Exercice4
     }
 
     @Test
+    /**
+     * Pour que le test passe, il faudra ne pas accepter l'alert qui s'affiche
+     */
     public void when_not_accepting_alert_then_text_not_changed() {
         driver.findElement(By.id("bigbutton")).click();
 

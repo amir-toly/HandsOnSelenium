@@ -27,7 +27,10 @@ public class Exercice6
     }
 
     @Test
-    public void when_setting_text_of_bigbutton_to_totot_using_javascript_then_text_is_changed() {
+    /**
+     * Ajouter du code javascript pour modifier le texte de l'élement bigbutton en toto
+     */
+    public void when_setting_text_of_bigbutton_to_toto_using_javascript_then_text_is_changed() {
     //ADD CODE HERE
 
         assertThat(driver.findElement(By.id("bigbutton")).getText()).isEqualTo("toto");

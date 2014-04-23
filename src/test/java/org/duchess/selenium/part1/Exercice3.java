@@ -26,8 +26,11 @@ public class Exercice3
     }
 
     @Test
+    /**
+     * Pour que le test passe, vous devrez valider que la page features.html place bien un cookie "luke" qui a pour valeur "skywalker"
+     */
     public void when_page_feature_then_cookie_luke_is_equal_to_skywalker() {
-        String cookieValue = null ; // ADD CODE HERE
+        String cookieValue = null; // ADD CODE HERE
 
         assertThat(cookieValue).isEqualTo("skywalker");
     }

@@ -1,4 +1,4 @@
-package org.duchess.selenium.part2;
+package org.duchess.selenium.part0;
 
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,8 @@ import org.openqa.selenium.WebDriver;
 import java.io.IOException;
 
 /**
-
+ * Pour les 3 premiers, lancer une instance de navigateur pour chacun des navigateurs présents sur votre machine.
+ * Le dernier est un navigateur "headless" et donc concerne tout le monde.
  */
 public class Exercice0 {
 

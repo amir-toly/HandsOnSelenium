@@ -11,17 +11,21 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * HandsOn - Selenium - Duchess
- * No refactoring here to show each step.
  */
 public class Exercice0
 
 {
     @Test
-    public void when_go_to_index_then_index_is_on_screen() throws IOException {
-        WebDriver driver = null;
+    /**
+     * Ici, il faut seulement ajouter du code pour faire en sorte que le test passe.
+     *
+     */
+    public void when_go_to_index_then_index_page_is_on_screen() throws IOException {
         //init driver
+        WebDriver driver = null;
 
          String pageUrl = Util.getHome();
+
         //go to page -   Util.getHome() return the url path for this handson
 
 

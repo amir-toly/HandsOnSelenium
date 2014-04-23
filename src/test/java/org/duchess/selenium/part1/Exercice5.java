@@ -25,6 +25,9 @@ public class Exercice5
     }
 
     @Test
+    /**
+     * Utiliser le back du navigateur
+     */
     public void when_going_back_then_page_is_feature() {
         driver.get(Util.getFeatures());
         driver.get(Util.getHome());
