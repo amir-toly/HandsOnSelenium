@@ -1,5 +1,6 @@
-package org.duchess.selenium;
+package org.duchess.selenium.part1;
 
+import org.duchess.selenium.Util;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,8 +28,12 @@ public class Exercice4
     }
 
     @Test
+    /**
+     * Pour que le test passe, il faudra accepter l'alert qui s'affiche
+     */
     public void when_accepting_alert_then_text_changed() {
         driver.findElement(By.id("bigbutton")).click();
+
         Alert alert = driver.switchTo().alert();
         alert.accept();
 
@@ -36,8 +41,12 @@ public class Exercice4
     }
 
     @Test
+    /**
+     * Pour que le test passe, il faudra ne pas accepter l'alert qui s'affiche
+     */
     public void when_not_accepting_alert_then_text_not_changed() {
         driver.findElement(By.id("bigbutton")).click();
+
         Alert alert = driver.switchTo().alert();
         alert.dismiss();
 
