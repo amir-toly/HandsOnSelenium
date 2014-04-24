@@ -38,6 +38,9 @@ public class Exercice0 {
      */
     public void when_trying_chromedriver_then_chrome_is_used() throws IOException {
         WebDriver driver = new ChromeDriver();
+//        System.setProperty("webdriver.chrome.driver","<path to Chromedriver .exe>");
+
+
         driver.close();
     }
 
