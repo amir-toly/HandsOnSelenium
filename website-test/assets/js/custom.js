@@ -92,7 +92,31 @@ jQuery(document).ready(function ($) {
         },
         1000);
 
+    //Google map setting
 
+//    $('#google_map').gmap3({
+//        action: 'addMarker',
+//        address: "Pearl St, NY",
+//        map: {
+//            center: true,
+//            zoom: 10
+//        },
+//        marker: {
+//            options: {
+//                draggable: false
+//            }
+//        },
+//        infowindow: {
+//            options: {
+//                // content: 'Hello World !<br>Phone: +1 111 111-11-11<br>Address: Chicago, IL, 111 Webdev St'
+//            },
+//            events: {
+//                closeclick: function() {
+//
+//}
+//            }
+//        }
+//    });
 
     //Portfolio filter
 
@@ -360,6 +384,7 @@ jQuery(document).ready(function ($) {
     });
 
     $('#submit').click(function () {
+        console.log("CLICK")
         $('input.error-input, textarea.error-input').delay(300).animate({
                 marginLeft: 0
             },
@@ -400,6 +425,7 @@ jQuery(document).ready(function ($) {
     };
 
     $('#form').submit(function () {
+        console.log("SUBMIT")
         $(this).ajaxSubmit(options);
         return false;
     });
