@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -31,6 +32,9 @@ public class Exercice3
      */
     public void when_page_feature_then_cookie_luke_is_equal_to_skywalker() {
         String cookieValue = null; // ADD CODE HERE
+        
+        Options options = driver.manage();
+        cookieValue = options.getCookieNamed("luke").getValue();
 
         assertThat(cookieValue).isEqualTo("skywalker");
     }

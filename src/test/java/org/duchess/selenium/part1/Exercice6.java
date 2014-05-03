@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -32,6 +33,7 @@ public class Exercice6
      */
     public void when_setting_text_of_bigbutton_to_toto_using_javascript_then_text_is_changed() {
         //ADD CODE HERE
+    	((JavascriptExecutor) driver).executeScript("document.getElementById('bigbutton').text = 'TOTO'");
 
         assertThat(driver.findElement(By.id("bigbutton")).getText()).isEqualTo("TOTO");
     }
@@ -40,8 +42,9 @@ public class Exercice6
     //Don't spend a lot of time in this one. Call us and we will explain it for you.
     public void when_setting_bigbutton_with_text_toto_with_javascript_then_surprised() {
         //ADD CODE HERE
+    	((JavascriptExecutor) driver).executeScript("document.getElementById('bigbutton').text = 'toto'");
 
-        assertThat(driver.findElement(By.id("bigbutton")).getText()).isEqualTo("toto");
+        assertThat(driver.findElement(By.id("bigbutton")).getText()).isEqualTo("toto"/* the text is always set to upper case */.toUpperCase());
     }
 
     @After

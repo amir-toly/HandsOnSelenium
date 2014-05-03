@@ -3,6 +3,7 @@ package org.duchess.selenium.part1;
 
 import org.duchess.selenium.Util;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -27,6 +28,7 @@ public class Exercice1
         driver.get(Util.getHome());
 
         // ADD CODE HERE
+        driver.findElement(By.linkText("About")).click();
 
         assertThat(driver.getTitle()).isEqualTo("About");
         driver.quit();
@@ -41,6 +43,7 @@ public class Exercice1
         driver.get(Util.getHome());
 
         // ADD CODE HERE
+        driver.findElement(By.linkText("Blog")).click();
 
         assertThat(driver.getTitle()).isEqualTo("Blog");
         driver.quit();

@@ -4,6 +4,7 @@ import org.duchess.selenium.Util;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -34,6 +35,8 @@ public class Exercice4
         driver.findElement(By.id("bigbutton")).click();
 
         //ADD CODE HERE
+        Alert popup = driver.switchTo().alert();
+        popup.accept();
 
         assertThat(driver.findElement(By.id("bigbutton")).getText()).isEqualTo("CHANGED !");
     }
@@ -46,6 +49,8 @@ public class Exercice4
         driver.findElement(By.id("bigbutton")).click();
 
         //ADD CODE HERE
+        Alert popup = driver.switchTo().alert();
+        popup.dismiss();
 
         assertThat(driver.findElement(By.id("bigbutton")).getText()).isEqualTo("NOT CHANGED !");
     }

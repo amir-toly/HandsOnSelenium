@@ -33,6 +33,7 @@ public class Exercice5
         driver.get(Util.getHome());
 
         //ADD CODE HERE
+        driver.navigate().back();
 
         assertThat(driver.getTitle()).isEqualTo("Features");
     }

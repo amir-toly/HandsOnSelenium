@@ -4,6 +4,7 @@ package org.duchess.selenium.part1;
 import org.duchess.selenium.Util;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.IOException;
 
@@ -22,16 +23,18 @@ public class Exercice0
      */
     public void when_go_to_index_then_index_page_is_on_screen() throws IOException {
         //init driver
-        WebDriver driver = null;
+        WebDriver driver = new FirefoxDriver();
 
          String pageUrl = Util.getHome();
 
         //go to page -   Util.getHome() return the url path for this handson
+        driver.get(pageUrl);
 
 
         assertThat(driver.getTitle()).isEqualTo("Home");
 
         //Close the driver
+        driver.close();
 
 
     }

@@ -34,6 +34,12 @@ public class Exercice2
      */
     public void when_fill_contact_form_then_form_submit() throws IOException {
         // ADD CODE HERE
+    	driver.findElement(By.id("fname")).sendKeys("First");
+    	driver.findElement(By.id("lname")).sendKeys("Last");
+    	driver.findElement(By.id("email")).sendKeys("em@il.com");
+    	driver.findElement(By.id("message")).sendKeys("Message");
+    	
+    	driver.findElement(By.id("form")).submit();
 
         assertThat(driver.findElement(By.cssSelector(".mess")).getText()).contains("Thanks");
 
@@ -47,6 +53,14 @@ public class Exercice2
      */
     public void when_fill_contact_form_with_no_email_then_field_is_getting_a_blue_border() {
         //Write the full test
+    	driver.findElement(By.id("fname")).sendKeys("First");
+    	driver.findElement(By.id("lname")).sendKeys("Last");
+    	//driver.findElement(By.id("email")).sendKeys("em@il.com");
+    	driver.findElement(By.id("message")).sendKeys("Message");
+    	
+    	driver.findElement(By.id("submit")).click();
+
+        assertThat(driver.findElement(By.id("email")).getAttribute("class")).contains("error-input");
 
     }
 
