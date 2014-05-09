@@ -56,7 +56,7 @@ public class Exercice1 {
         //ADD Code here
         while ((new WebDriverWait(driver, 10))
         		.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("#containment-portfolio li:not(.hidden)"))).size() != 4) {
-        	// NOTHING
+        	driver.wait(200);
         }
 
         assertThat(driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size()).isEqualTo(4);
