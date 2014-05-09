@@ -36,10 +36,10 @@ public class Exercice2 {
                         .until(new ExpectedCondition<Boolean>() {
                             @Override
                             public Boolean apply(WebDriver driver) {
-                                return driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size() == 4;
+                                return driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size() == 2;
                             }
                  });
-        assertThat(driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size()).isEqualTo(4);
+        assertThat(driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size()).isEqualTo(2);
     }
 
 
