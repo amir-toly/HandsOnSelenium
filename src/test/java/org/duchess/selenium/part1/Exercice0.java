@@ -34,7 +34,7 @@ public class Exercice0
         assertThat(driver.getTitle()).isEqualTo("Home");
 
         //Close the driver
-        driver.close();
+        driver.quit();
 
 
     }
