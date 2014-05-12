@@ -3,7 +3,6 @@ package org.duchess.selenium.part4.ex1;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -30,7 +29,7 @@ public class Exercice1 {
     public void when_click_to_next_then_new_datas_with_implicit_wait() {
     	portofolioPage.clickOnWebLinkAndWaitUntilContainmentPortfolioContainsTwoElements();
     	
-        assertThat(driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size()).isEqualTo(2);
+        assertThat(portofolioPage.getNumberOfVisibleElementsInContainmentPortfolio()).isEqualTo(2);
     }
 
     @After

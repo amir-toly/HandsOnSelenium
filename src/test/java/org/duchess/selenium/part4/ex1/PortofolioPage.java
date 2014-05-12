@@ -25,9 +25,13 @@ public class PortofolioPage {
                         .until(new ExpectedCondition<Boolean>() {
                             @Override
                             public Boolean apply(WebDriver driver) {
-                                return driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size() == 2;
+                                return getNumberOfVisibleElementsInContainmentPortfolio() == 2;
                             }
                  });
+	}
+	
+	public int getNumberOfVisibleElementsInContainmentPortfolio() {
+		return driver.findElements(By.cssSelector("#containment-portfolio li:not(.hidden)")).size();
 	}
 
 }
